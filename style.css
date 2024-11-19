@@ -1,0 +1,94 @@
+/* reset CSS */
+
+:root {
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    
+    outline: none;
+    
+    font-size: 1.5rem;
+    line-height: 1.5;
+    
+    /* border: 1px solid red; */
+}
+  
+/* standards */
+
+:root {
+    --black010: rgba(0, 0, 0, 0.1);
+    --black050: rgba(0, 0, 0, 0.5);
+    --shadow: 0 0 0.5rem var(--black050);
+    
+    --accent: lightsteelblue;
+}
+
+/* style */
+
+body {
+    background-color: lightsalmon;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+.gameContainer {
+    display: grid;
+    grid-template: repeat(3, 5rem) / repeat(3, 5rem);
+    border: 1px solid;
+}
+
+.gameField {
+    border: 1px solid;
+    font-size: 200%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gameReset, button{
+    box-shadow: var(--shadow);
+    border-radius: 10rem;
+    padding: 0.5rem 5rem;
+    background-color: white
+}
+
+#popupDialog {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+#popupText {
+    margin: 7rem 0; 
+    color: white; 
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    backdrop-filter: blur(5px);
+}
